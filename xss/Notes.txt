@@ -1,0 +1,1 @@
+To avoid the %27 being escaped by \ we can use any byte from %A1 to %FE to be bundled with single quote in order to trick the filter. [Brute Logic]
